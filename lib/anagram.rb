@@ -20,10 +20,12 @@ class Anagram
 
   def self.match(list_of_words)
     self_dictionary = self.word_to_dictionary(@word)
-    list_of_words.collect do | word |
+    match_list = []
+    list_of_words.each do | word |
       if self.word_to_dictionary(word) == self_dictionary
-        word
+        match_list << word
       end
     end
+    match_list
   end
 end

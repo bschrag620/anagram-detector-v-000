@@ -2,11 +2,6 @@
 class Anagram
   attr_accessor :word
 
-  def initialize(word)
-    @word = word
-    @lettercount = self.word_to_dictionary(@word)
-  end
-
   def self.word_to_dictionary(word)
     dictionary = {}
     for letter in word.split('')
@@ -17,6 +12,11 @@ class Anagram
       end
     end
     dictionaty
+  end
+  
+  def initialize(word)
+    @word = word
+    @lettercount = self.word_to_dictionary(@word)
   end
 
   def self.match(list_of_words)

@@ -16,12 +16,12 @@ class Anagram
 
   def initialize(word)
     @word = word
-    @lettercount = word_to_dictionary(@word)
   end
 
   def self.match(list_of_words)
+    self_dictionary = self.word_to_dictionary(@word)
     list_of_words.collect do | word |
-      if self.word_to_dictionary(word) == @lettercount
+      if self.word_to_dictionary(word) == self_dictionary
         word
       end
     end

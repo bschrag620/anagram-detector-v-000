@@ -13,7 +13,7 @@ class Anagram
     end
     dictionaty
   end
-  
+
   def initialize(word)
     @word = word
     @lettercount = self.word_to_dictionary(@word)

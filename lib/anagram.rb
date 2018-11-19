@@ -16,7 +16,7 @@ class Anagram
 
   def initialize(word)
     @word = word
-    @lettercount = self.word_to_dictionary(@word)
+    @lettercount = word_to_dictionary(@word)
   end
 
   def self.match(list_of_words)

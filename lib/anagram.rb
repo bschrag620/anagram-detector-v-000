@@ -26,7 +26,7 @@ class Anagram
         dictionary[letter] = 1
       end
     end
-    dictionaty
+    dictionary
   end
 
 end
